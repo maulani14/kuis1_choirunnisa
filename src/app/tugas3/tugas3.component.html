@@ -1,0 +1,13 @@
+<button 
+  class="btn btn-primary" 
+  (click)="onCreationStatus()">Tampilkan Detail</button>
+  <!-- <p>{{ serverCreationStatus }}</p> -->
+  <p *ngIf ="i%2 !== 0">{{serverCreationStatus}} </p>
+  <!-- membuat backround warna -->
+  <p *ngFor="let i of log"
+      [attr.data-index]="i"
+      [ngStyle]="{'backgroundColor': i >= 5 ? 'blue' : 'transparant'}" 
+      [ngClass]="{'next': i >= 5}">
+      {{ i }}
+    </p>
+      
